@@ -103,8 +103,24 @@ const CardItem: FC<CardProps> = memo(({ card }) => {
                   }
                 />
               </IconButton>
-              <IconButton aria-label="delete" onClick={deleteCard}>
-                <ClearIcon />
+              <IconButton
+                aria-label="delete"
+                sx={{
+                  bgcolor: "#F08077",
+                  "&:hover": {
+                    bgcolor: "red",
+                  },
+                }}
+                onClick={deleteCard}
+              >
+                <ClearIcon
+                  htmlColor="white"
+                  sx={{
+                    "&:hover": {
+                      color: "black",
+                    },
+                  }}
+                />
               </IconButton>
             </>
           }
